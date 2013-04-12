@@ -16,9 +16,11 @@ Or install it:
 ```
 {% exiftag tagname,[source],[file] %}
 ``` 
-Everything given as tagname is called on EXIFR::JPEG, so this could be model oder f_number.to_f (see https://github.com/remvee/exifr)
-If you give a source, this source is used build the fullpath for the given file (you can also configure them in _config.yml, see below)
-If the file is given, this is the file to get Exif Tags for, this can be alternatively defined in the YAML Front Matter as img: file
+Everything given as ```tagname``` is called on EXIFR::JPEG, so this could be ```model``` or ```f_number.to_f``` (see https://github.com/remvee/exifr)
+
+If you give a ```source```, this source is used build the fullpath for the given ```file``` (you can also configure them in _config.yml, see below)
+
+If the ```file``` is given, this is the file to get Exif Tags for, this can be alternatively defined in the YAML Front Matter as ```img: file ```
 
 
 ## Configuration:
