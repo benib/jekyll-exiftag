@@ -3,6 +3,14 @@ jekyll-exiftag
 
 A LiquidTag to get Exif Tags using EXIFR
 
+## Installation
+
+Place lib/jekyll-exiftag.rb in your _plugins folder
+
+Or install it:
+
+    $ gem install jekyll-exiftag
+
 ## Usage
 
 ```
