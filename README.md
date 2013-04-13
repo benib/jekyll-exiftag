@@ -20,6 +20,8 @@ Everything given as ```tagname``` is called on EXIFR::JPEG, so this could be ```
 
 If you give a ```source```, this source is used build the fullpath for the given ```file``` (you can also configure them in _config.yml, see below)
 
+If you have more than one source configured they are tried one after the other, until a file is found. The source given as a parameter to the liquid tag is used first, then the ones defined in _config.yml
+
 If the ```file``` is given, this is the file to get Exif Tags for, this can be alternatively defined in the YAML Front Matter as ```img: file ```
 
 
