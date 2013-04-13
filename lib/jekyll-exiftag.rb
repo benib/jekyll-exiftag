@@ -65,7 +65,7 @@ module Jekyll
       # try it and return empty string on failure
       begin
         exif = EXIFR::JPEG::new(file_name)
-        "#{exif.instance_eval(tag)}"
+        return tag.split('.').inject(exif){|o,m| o.send(m)}
       rescue
         ""
       end
