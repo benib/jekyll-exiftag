@@ -34,8 +34,11 @@ module Jekyll
     end
 
     def render(context)
-      #abort context.registers[:site].config['source'].inspect
-      sources = Array.new(context.registers[:site].config['exiftag']['sources'])
+      sources = Array.new()
+      if context.registers[:site].config['exiftag']['sources']
+        sources.unshift(*context.registers[:site].config['exiftag']['sources'])
+      end
+
       # first param is the exif tag
       tag = @args[0]
 
