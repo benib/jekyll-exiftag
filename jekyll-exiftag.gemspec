@@ -1,7 +1,7 @@
 Gem::Specification.new do |gem|
   gem.name        = 'jekyll-exiftag'
-  gem.version     = '0.0.2'
-  gem.date        = '2013-04-13'
+  gem.version     = '0.0.3'
+  gem.date        = '2015-06-09'
   gem.summary     = "jekyll-exiftag provides exif data in jekyll sites"
   gem.description = "jekyll-exiftag is a LiquidTag Extension for Jekyll to get Exif data from images"
   gem.authors     = ["Beni Buess"]
