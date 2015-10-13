@@ -39,7 +39,7 @@ These paths are relative to your sites root. Don't add leading and trailing slas
 
 ## License
 
-Copyright (C) 2013 Beni Buess (http://benel.net/)
+Copyright (C) 2013 - 2015 Beni Buess (http://benel.net/)
 
 The MIT License
 

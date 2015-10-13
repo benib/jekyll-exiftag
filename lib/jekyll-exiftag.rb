@@ -6,7 +6,7 @@
 # Usage:
 #
 # {% exiftag tagname,[source],[file] %}
-# 
+#
 # Everything given as tagname is called on EXIFR::JPEG, so this could be model oder f_number.to_f (see https://github.com/remvee/exifr)
 # If you give a source, this source is used build the fullpath for the given file (you can also configure them in _config.yml, see below)
 # If the file is given, this is the file to get Exif Tags for, this can be alternatively defined in the YAML Front Matter as img: file
@@ -35,7 +35,7 @@ module Jekyll
 
     def render(context)
       sources = Array.new()
-      if context.registers[:site].config['exiftag']['sources']
+      if if context.registers[:site].config['exiftag'] and context.registers[:site].config['exiftag']['sources']
         sources.unshift(*context.registers[:site].config['exiftag']['sources'])
       end
 
@@ -46,7 +46,7 @@ module Jekyll
       if @args.count > 1
         sources.unshift(@args[1])
       end
-      
+
       # the image can be passed as the third parameter
       if @args.count > 2
         img = @args[2]
@@ -54,7 +54,7 @@ module Jekyll
       else
         img = context.environments.first["page"]["img"]
       end
-      
+
       # first check if the given img is already the path
       if File.exist?(img)
         file_name = img
@@ -73,7 +73,7 @@ module Jekyll
         ""
       end
     end
-    
+
     def split_params(params)
       params.split(",").map(&:strip)
     end
