@@ -35,7 +35,7 @@ module Jekyll
 
     def render(context)
       sources = Array.new()
-      if if context.registers[:site].config['exiftag'] and context.registers[:site].config['exiftag']['sources']
+      if context.registers[:site].config['exiftag'] and context.registers[:site].config['exiftag']['sources']
         sources.unshift(*context.registers[:site].config['exiftag']['sources'])
       end
 
