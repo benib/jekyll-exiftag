@@ -44,12 +44,13 @@ module Jekyll
 
       # if a second parameter is passed, use it as a possible img source
       if @args.count > 1
-        sources.unshift(@args[1])
+        src = Liquid::Template.parse(@args[1]).render context
+        sources.unshift(src)
       end
 
       # the image can be passed as the third parameter
       if @args.count > 2
-        img = @args[2]
+        img = Liquid::Template.parse(@args[2]).render context
       # or be defined in the YAML Front Matter like img: <file>
       else
         img = context.environments.first["page"]["img"]
