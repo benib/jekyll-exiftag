@@ -24,7 +24,7 @@
 # These paths are relative to your sites root. Don't add leading and trailing slashes.
 #
 
-require 'exifr'
+require 'exifr/jpeg'
 
 module Jekyll
   class ExifTag < Liquid::Tag
