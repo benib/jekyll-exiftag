@@ -18,7 +18,7 @@ Or install it:
 ``` 
 Everything given as ```tagname``` is called on EXIFR::JPEG, so this could be ```model``` or ```f_number.to_f``` (see https://github.com/remvee/exifr)
 
-If you give a ```source```, this source is used build the fullpath for the given ```file``` (you can also configure them in _config.yml, see below)
+If you give a ```source```, this source is used build the fullpath for the given ```file``` (you can also configure them in _config.yml, see below). ```file``` is the complete filename without any path, something like ```photo.jpg```
 
 If you have more than one source configured they are tried one after the other, until a file is found. The source given as a parameter to the liquid tag is used first, then the ones defined in _config.yml
 
